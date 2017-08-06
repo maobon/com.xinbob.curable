@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.xinbob.curable.activity.BoensiDetailActivity">
+
+    <item
+        android:id="@+id/menu_choose_date"
+        android:icon="@drawable/ic_today_white_24dp"
+        android:title="查看以往"
+        app:showAsAction="always" />
+
+</menu>

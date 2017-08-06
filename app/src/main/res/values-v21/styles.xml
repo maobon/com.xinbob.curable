@@ -1,0 +1,20 @@
+<resources>
+    <!-- Above Android 5.0 Api=21 system status bar can not set attr -->
+    <!-- 系统顶部状态栏 5.0以前 无法指定其颜色 -->
+    <style name="SpecialActivityTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Activity全屏 开始-->
+    <style name="MyFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+    <!-- Activity全屏 结束-->
+
+</resources>
