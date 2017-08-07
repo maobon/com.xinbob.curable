@@ -39,7 +39,6 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
-
         <receiver
             android:name=".receiver.CheckTodayRecordReceiver"
             android:enabled="true"
@@ -49,6 +48,7 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".activity.TestActivity"></activity>
     </application>
 
 </manifest>

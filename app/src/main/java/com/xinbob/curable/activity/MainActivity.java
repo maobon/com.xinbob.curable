@@ -159,6 +159,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
         switch (view.getId()) {
             case R.id.fab_add_new_item:
                 startActivity(new Intent(MainActivity.this, AddWorryActivity.class));
+
+                // 打赏开发者测试
+                // startActivity(new Intent(MainActivity.this, TestActivity.class));
                 break;
         }
     }
