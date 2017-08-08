@@ -28,6 +28,7 @@ public class TestActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(TestActivity.this, "谢谢，您没有安装支付宝客户端", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 

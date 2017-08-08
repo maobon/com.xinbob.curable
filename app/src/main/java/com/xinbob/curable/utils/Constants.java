@@ -14,4 +14,7 @@ public class Constants {
     };
 
     public static final String ACTION_CHECK_TODAY_RECORD = "com.xinbob.curable.check.today.record";
+    // 每天21点30分检查本日记录情况
+    public static final int HOUR_OF_DAY = 21;
+    public static final int MINUTES = 30;
 }

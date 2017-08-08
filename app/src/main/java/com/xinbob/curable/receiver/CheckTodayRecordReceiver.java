@@ -15,23 +15,26 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * 检查本日记录
+ */
 public class CheckTodayRecordReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
+        // 本日日期
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
         String today = sdf.format(new Date());
-
+        // 查询本日记录
         List<Trouble> troubles = DataSupport.where("timestamp=?", today).find(Trouble.class);
 
         if (troubles == null || troubles.size() < 1) {
-            NotificationUtils.showNotification(context, "今天一个记录都没有", "随便写点什么");
+            NotificationUtils.showNotification(context, "情绪日志", "今天不记录点什么吗?");
         } else {
             for (Trouble trouble : troubles) {
                 if (trouble.getMood() == -1 || TextUtils.isEmpty(trouble.getResolve()) ||
                         TextUtils.isEmpty(trouble.getTenTypes())) {
-                    NotificationUtils.showNotification(context, "还有没写完的", "明天就不能写了");
+                    NotificationUtils.showNotification(context, "情绪日志", "请及时完成本日未完成的条目");
                     break;
                 }
             }

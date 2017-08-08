@@ -1,6 +1,5 @@
 package com.xinbob.curable.activity;
 
-import android.app.AlarmManager;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
@@ -20,7 +19,8 @@ import com.xinbob.curable.R;
 import com.xinbob.curable.adapter.TroublesListAdapter;
 import com.xinbob.curable.base.BaseActivity;
 import com.xinbob.curable.db.Trouble;
-import com.xinbob.curable.utils.AlarmUtil;
+import com.xinbob.curable.utils.AlarmSettingUtils;
+import com.xinbob.curable.utils.Constants;
 import com.xinbob.curable.utils.TimeUtils;
 
 import org.litepal.crud.DataSupport;
@@ -89,8 +89,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
         now = sdf.format(new Date());
 
-        // test
-        AlarmUtil.setCheckTodayRecordSchedule(this, 21, 30);
+        AlarmSettingUtils.setCheckTodayRecordSchedule(this, Constants.HOUR_OF_DAY, Constants.MINUTES);
     }
 
 

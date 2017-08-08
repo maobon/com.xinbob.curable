@@ -31,7 +31,7 @@
             android:theme="@style/SpecialActivityTheme" />
 
         <receiver
-            android:name=".receiver.SetCheckTaskReceiver"
+            android:name=".receiver.BootCompleteAndUserPresentReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="1000">
@@ -39,6 +39,7 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
+
         <receiver
             android:name=".receiver.CheckTodayRecordReceiver"
             android:enabled="true"
@@ -48,7 +49,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.TestActivity"></activity>
+        <activity android:name=".activity.TestActivity"/>
+
     </application>
 
 </manifest>

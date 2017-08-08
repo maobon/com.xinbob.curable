@@ -5,9 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 
-import com.xinbob.curable.utils.AlarmUtil;
+import com.xinbob.curable.utils.AlarmSettingUtils;
+import com.xinbob.curable.utils.Constants;
 
-public class SetCheckTaskReceiver extends BroadcastReceiver {
+/**
+ * 监听设备启动完成与用户解锁广播
+ */
+public class BootCompleteAndUserPresentReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -15,7 +19,7 @@ public class SetCheckTaskReceiver extends BroadcastReceiver {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                AlarmUtil.setCheckTodayRecordSchedule(context, 21, 30);
+                AlarmSettingUtils.setCheckTodayRecordSchedule(context, Constants.HOUR_OF_DAY, Constants.MINUTES);
             }
         }, 1000);
     }
